@@ -4,7 +4,9 @@
 * [Setup](#setup)
 
 ## General info
-Proyecto Biblioteca (CRUD) - Desafío Java Developer 
+Proyecto Biblioteca (CRUD) - Desafío Java Developer.
+Información adicional sobre el puerto y base de datos se encuentran 
+en el archivo "application.properties".
 
 ## Technologies
 Este proyecto fue creado con las siguiente tecnologías:
