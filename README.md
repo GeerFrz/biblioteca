@@ -12,6 +12,7 @@ Este proyecto fue creado con las siguiente tecnologías:
 * SpringBoot 2.7
 * Mockito 4.6
 * Thymeleaf 3
+* Lombok
 * JavaScript
 * Bootstrap 5.2
 
