@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:fragment="cabecera">
+    <meta charset="UTF-8">
+    <title>Test App</title>
+    <link rel="icon" href="/favicon.ico" type="image/ico" th:href="@{/favicon.ico}">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link href="../static/icons/bootstrap-icons.css" rel="stylesheet" th:href="@{/icons/bootstrap-icons.css}">
+    <link href="../static/css/default.css" rel="stylesheet" th:href="@{/css/default.css}">
+</head>
+
+<body>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark" th:fragment="menu">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Menu</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contenedorOpciones" aria-controls="contenedorOpciones" aria-expanded="false" aria-label="Conmutar navegacion">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="contenedorOpciones">
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Listado de libros</a>
+                <a class="nav-link" href="/formulario">Agregar nuevo libro</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-2 mb-2 text-center" th:fragment="titulo">
+    <h3 th:text="${tituloPagina}"></h3>
+</div>
+
+<div class="footer fixed-bottom bg-dark text-white text-center p-2" th:fragment="pie">
+    <div class="container">
+        <span class="text-muted">Desafío Java Developer - Germán Fernández</span>
+    </div>
+</div>
+
+<div th:fragment="javascript">
+    <script src="../static/js/bootstrap.bundle.min.js" type="text/javascript" th:src="@{/js/bootstrap.bundle.min.js}"></script>
+    <script src="../static/js/globales.js" type="text/javascript" th:src="@{/js/globales.js}"></script>
+</div>
+
+</body>
+</html>

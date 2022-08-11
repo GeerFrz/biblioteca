@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments :: cabecera" />
+
+<body class="d-flex flex-column h-100">
+
+<nav th:replace="fragments :: menu"></nav>
+<div th:replace="fragments :: titulo"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4 offset-md-4">
+            <form>
+                <div class="mb-3">
+                    <label for="titulo" class="form-label" id="lblTituloLibro">Título</label>
+                    <input type="text" class="form-control" id="titulo" aria-labelledby="lblTituloLibro" th:value="${libro?.titulo}">
+                </div>
+                <div class="mb-3">
+                    <label for="autor" class="form-label" id="lblAutor">Autor</label>
+                    <input type="text" class="form-control" id="autor" aria-labelledby="lblAutor" th:value="${libro?.autor}">
+                </div>
+                <div class="mb-3">
+                    <div class="row">
+                        <div class="col">
+                            <label for="precio" class="form-label" id="lblPrecio">Precio</label>
+                            <input type="number" step=".01" min="0" class="form-control" id="precio" aria-labelledby="lblPrecio" th:value="${libro?.precio}">
+                        </div>
+
+                        <div class="col">
+                            <label for="fechaLanzamiento" class="form-label" id="lblFechaLanzamiento">Fecha de lanzamiento</label>
+                            <input type="date" class="form-control" id="fechaLanzamiento" aria-labelledby="lblFechaLanzamiento" th:value="${libro?.fechaLanzamiento}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-none"> <!-- Campos ocultos: -->
+                    <input type="hidden" id="id" th:value="${libro?.id}" >
+                </div>
+
+                <div class="mt-4 mb-3">
+                    <button type="button" class="btn btn-primary w-100" id="btnGuardar">Guardar</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<div th:replace="fragments :: pie" />
+<div th:replace="fragments :: javascript" />
+
+<!-- JavaScript propio de la pagina actual: -->
+<script src="../static/js/libro-formulario.js" type="text/javascript" th:src="@{/js/libro-formulario.js}"></script>
+
+</body>
+</html>
